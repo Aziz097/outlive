@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { CheckoutToast } from "@/components/shared/checkout-toast";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -128,6 +129,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+        <CheckoutToast />
         {children}
       </body>
     </html>
