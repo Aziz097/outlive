@@ -51,13 +51,13 @@ export function HeroSection() {
                 className="w-full sm:w-auto bg-gray-900 text-white hover:bg-gray-800 transition-all rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-semibold"
                 onClick={() => scrollToSection("#guarantee")}
               >
-                Start Reading — $29
+                Start Reading — $9.99
                 <ChevronRight className="w-4 h-4 ml-2 opacity-90" />
               </Button>
 
               <div className="flex items-center gap-3 text-sm text-gray-700 font-semibold">
-                <span className="line-through decoration-red-400 decoration-2 opacity-60">$49</span>
-                <span className="text-teal-700 bg-teal-100/50 border border-teal-100 px-2 py-0.5 rounded-md">Save 40%</span>
+                <span className="line-through decoration-red-400 decoration-2 opacity-60">$17.99</span>
+                <span className="text-teal-700 bg-teal-100/50 border border-teal-100 px-2 py-0.5 rounded-md">Save 45%</span>
               </div>
             </div>
 

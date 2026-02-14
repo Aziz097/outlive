@@ -58,23 +58,14 @@ export function CheckoutToast() {
                                     Get the complete 15-page summary & guide.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="w-full">
                                     <Button
                                         size="sm"
-                                        className="h-8 text-xs font-bold bg-gray-900 text-white hover:bg-gray-800 shadow-md rounded-lg"
-                                        onClick={() => window.open("https://gumroad.com", "_blank")}
+                                        className="w-full h-8 text-xs font-bold bg-gray-900 text-white hover:bg-gray-800 shadow-md rounded-lg"
+                                        onClick={() => window.open("https://lynk.id/chroniclelabs/2lvgdnn4qr3r", "_blank")}
                                     >
                                         <ShoppingCart className="w-3 h-3 mr-1.5 opacity-90" />
-                                        Gumroad
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="h-8 text-xs font-bold border-orange-200 text-orange-600 hover:text-orange-700 hover:bg-orange-50 rounded-lg"
-                                        onClick={() => window.open("https://etsy.com", "_blank")}
-                                    >
-                                        <ExternalLink className="w-3 h-3 mr-1.5 opacity-90" />
-                                        Etsy
+                                        Get Instant Access
                                     </Button>
                                 </div>
                             </div>

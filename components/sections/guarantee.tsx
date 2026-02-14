@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 const features = [
   "High-Resolution PDF (Mobile Optimized)",
   "Lifetime Access + Updates",
-  "15-Page Executive Summary",
   "Instant Download",
   "30-Day Money Back Guarantee",
 ]
@@ -44,10 +43,10 @@ export function GuaranteeSection() {
           {/* Pricing Card Section */}
           <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 border border-white/80 mb-10 inline-block w-full max-w-sm mx-auto shadow-xl shadow-gray-200/50 transform transition-transform hover:-translate-y-1">
             <div className="flex items-center justify-center gap-4 mb-2">
-              <span className="text-6xl font-heading font-black text-gray-900 tracking-tighter">$29</span>
+              <span className="text-6xl font-heading font-black text-gray-900 tracking-tighter">$9.99</span>
               <div className="flex flex-col items-start">
-                <span className="text-sm text-gray-500 line-through decoration-pink-300 decoration-1">$49</span>
-                <span className="text-[10px] font-bold text-pink-500 bg-pink-100/50 px-2 py-0.5 rounded-md text-center w-full">SAVE 40%</span>
+                <span className="text-sm text-gray-500 line-through decoration-pink-300 decoration-1">$17.99</span>
+                <span className="text-[10px] font-bold text-pink-500 bg-pink-100/50 px-2 py-0.5 rounded-md text-center w-full">SAVE 45%</span>
               </div>
             </div>
             <p className="text-xs text-gray-500 mb-8 font-bold uppercase tracking-wide">One-time payment, lifetime access</p>
@@ -67,18 +66,10 @@ export function GuaranteeSection() {
               <Button
                 size="lg"
                 className="w-full bg-gray-900 text-white hover:bg-gray-800 h-14 text-lg font-bold rounded-2xl shadow-lg shadow-gray-200 hover:shadow-xl transition-all hover:scale-[1.02]"
-                onClick={() => window.open("https://gumroad.com", "_blank")}
+                onClick={() => window.open("https://lynk.id/chroniclelabs/2lvgdnn4qr3r", "_blank")}
               >
                 <ShoppingCart className="w-4 h-4 mr-2 opacity-90" />
-                Get on Gumroad
-              </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                className="w-full text-orange-600 hover:text-orange-700 hover:bg-orange-50/50 h-12 font-bold rounded-2xl"
-                onClick={() => window.open("https://etsy.com", "_blank")}
-              >
-                Or buy on Etsy
+                Get Instant Access
               </Button>
             </div>
           </div>
