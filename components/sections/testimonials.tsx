@@ -30,7 +30,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="py-16 relative bg-transparent">
+        <section className="py-[var(--spacing-section)] relative bg-transparent overflow-hidden">
             <Container size="lg">
                 <div className="relative z-10">
                     {/* Header */}
@@ -56,14 +56,16 @@ export function TestimonialsSection() {
                         </motion.h2>
                     </div>
 
-                    {/* Testimonial Cards */}
-                    <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+                    {/* Testimonial Carousel */}
+                    {/* Using CSS Scroll Snap for native-feeling mobile carousel */}
+                    <div
+                        className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                    >
                         {testimonials.map((testimonial, index) => {
-
                             return (
                                 <motion.div
                                     key={testimonial.name}
-                                    className="card-zen p-8 hover-lift border border-white/60 bg-white/60 backdrop-blur-md"
+                                    className="snap-center shrink-0 w-[85vw] md:w-auto card-zen p-[var(--spacing-card)] hover-lift border border-white/60 bg-white/60 backdrop-blur-md flex flex-col"
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-30px" }}
@@ -72,11 +74,11 @@ export function TestimonialsSection() {
                                 >
                                     <Quote className="w-5 h-5 text-gray-300 mb-6 -scale-x-100 fill-gray-200" strokeWidth={1} />
 
-                                    <p className="text-gray-700 font-medium leading-relaxed mb-6 min-h-[80px] text-sm">
+                                    <p className="text-gray-700 font-medium leading-relaxed mb-6 min-h-[80px] text-[length:var(--font-size-p)] flex-grow">
                                         &ldquo;{testimonial.quote}&rdquo;
                                     </p>
 
-                                    <div className="flex items-center gap-4 pt-6 border-t border-gray-100/50">
+                                    <div className="flex items-center gap-4 pt-6 border-t border-gray-100/50 mt-auto">
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-white shadow-sm font-bold text-xs text-gray-500 border border-gray-100`}>
                                             {testimonial.initials}
                                         </div>

@@ -14,13 +14,13 @@ const features = [
 
 export function GuaranteeSection() {
   return (
-    <section id="guarantee" className="py-12 lg:py-16 relative overflow-hidden bg-transparent">
+    <section id="guarantee" className="py-[var(--spacing-section)] relative overflow-hidden bg-transparent">
       {/* Background Ambience */}
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
 
       <Container size="lg">
         <motion.div
-          className="relative z-10 card-zen p-10 md:p-16 text-center max-w-4xl mx-auto backdrop-blur-3xl bg-white/70 border border-white/60 shadow-2xl shadow-cyan-100/40"
+          className="relative z-10 card-zen p-[var(--spacing-card-lg)] text-center max-w-4xl mx-auto backdrop-blur-3xl bg-white/70 border border-white/60 shadow-2xl shadow-cyan-100/40"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -36,12 +36,12 @@ export function GuaranteeSection() {
             Invest directly in your <span className="text-cyan-600 font-light italic">Future Self</span>
           </h2>
 
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-[length:var(--font-size-h3)] text-gray-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
             The complete Medicine 3.0 strategy guide. A small price for a longer, better life.
           </p>
 
           {/* Pricing Card Section */}
-          <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 border border-white/80 mb-10 inline-block w-full max-w-sm mx-auto shadow-xl shadow-gray-200/50 transform transition-transform hover:-translate-y-1">
+          <div className="bg-white/90 backdrop-blur-md rounded-3xl p-[var(--spacing-card)] border border-white/80 mb-10 inline-block w-full max-w-sm mx-auto shadow-xl shadow-gray-200/50 transform transition-transform hover:-translate-y-1">
             <div className="flex items-center justify-center gap-4 mb-2">
               <span className="text-6xl font-heading font-black text-gray-900 tracking-tighter">$9.99</span>
               <div className="flex flex-col items-start">

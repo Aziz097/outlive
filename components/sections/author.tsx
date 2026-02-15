@@ -7,7 +7,7 @@ import { GraduationCap, Stethoscope, Award, BookOpen } from "lucide-react"
 
 export function AuthorSection() {
   return (
-    <section id="author" className="py-12 lg:py-16 relative bg-transparent">
+    <section id="author" className="py-[var(--spacing-section)] relative bg-transparent">
       <Container size="lg">
         <motion.div
           className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center"
@@ -31,14 +31,14 @@ export function AuthorSection() {
             </div>
 
             {/* Credential Badge */}
-            <div className="absolute -bottom-6 -right-6 lg:-right-8 bg-white/90 backdrop-blur-xl border border-white/60 p-5 rounded-2xl shadow-lg border-t border-white animate-float">
+            <div className="absolute -bottom-6 -right-6 lg:-right-8 bg-white/90 backdrop-blur-xl border border-white/60 p-[var(--spacing-card)] rounded-2xl shadow-lg border-t border-white animate-float">
               <div className="flex items-center gap-4">
                 <div className="bg-cyan-50 p-3 rounded-xl border border-cyan-100/50">
                   <Stethoscope className="w-5 h-5 text-cyan-600" strokeWidth={2} />
                 </div>
                 <div>
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Founded</p>
-                  <p className="font-heading font-bold text-gray-800 text-lg">Early Medical</p>
+                  <p className="font-heading font-bold text-gray-800 text-[length:var(--font-size-h3)]">Early Medical</p>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ export function AuthorSection() {
 
             {/* Stats / Credentials Grid */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
+              <div className="flex items-start gap-4 p-[var(--spacing-card)] rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
                 <GraduationCap className="w-5 h-5 text-gray-400 mt-1" strokeWidth={2} />
                 <div>
                   <h4 className="font-heading font-bold text-gray-800">Stanford</h4>
@@ -72,7 +72,7 @@ export function AuthorSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
+              <div className="flex items-start gap-4 p-[var(--spacing-card)] rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
                 <Award className="w-5 h-5 text-gray-400 mt-1" strokeWidth={2} />
                 <div>
                   <h4 className="font-heading font-bold text-gray-800">Johns Hopkins</h4>
@@ -80,7 +80,7 @@ export function AuthorSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
+              <div className="flex items-start gap-4 p-[var(--spacing-card)] rounded-2xl bg-white/60 border border-white/60 hover:bg-white/80 transition-all shadow-sm backdrop-blur-md">
                 <BookOpen className="w-5 h-5 text-gray-400 mt-1" strokeWidth={2} />
                 <div>
                   <h4 className="font-heading font-bold text-gray-800">#1 Bestseller</h4>

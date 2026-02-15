@@ -27,7 +27,7 @@ const issues = [
 
 export function ProblemStatement() {
   return (
-    <section id="problem" className="py-12 lg:py-16 bg-transparent relative">
+    <section id="problem" className="py-[var(--spacing-section)] bg-transparent relative">
       <Container size="lg">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-10 relative z-10"
@@ -55,20 +55,22 @@ export function ProblemStatement() {
             return (
               <motion.div
                 key={issue.title}
-                className="card-zen p-8 hover-lift border border-white/60 bg-white/60 backdrop-blur-md"
+                className="card-zen p-[var(--spacing-card)] hover-lift border border-white/60 bg-white/60 backdrop-blur-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/70 backdrop-blur-sm mb-5 shadow-sm border border-white/50`}>
-                  <Icon className={`w-5 h-5 ${iconColor}`} strokeWidth={2} />
+                <div className="flex items-center gap-4 mb-3 relative z-10">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/70 backdrop-blur-sm shadow-sm border border-white/50 shrink-0`}>
+                    <Icon className={`w-5 h-5 ${iconColor}`} strokeWidth={2} />
+                  </div>
+                  <h3 className="font-heading text-[length:var(--font-size-h3)] font-bold text-gray-800 tracking-tight mb-0">
+                    {issue.title}
+                  </h3>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-gray-800 mb-2 tracking-tight">
-                  {issue.title}
-                </h3>
-                <p className="text-gray-600 text-sm font-medium leading-relaxed">
+                <p className="text-gray-600 text-[length:var(--font-size-p)] font-medium leading-relaxed relative z-10">
                   {issue.description}
                 </p>
               </motion.div>

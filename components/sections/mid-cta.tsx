@@ -19,10 +19,10 @@ export function MidCTA() {
     }
 
     return (
-        <section className="py-16 lg:py-20 relative overflow-hidden bg-transparent">
+        <section className="py-[var(--spacing-section)] relative overflow-hidden bg-transparent">
             <Container size="lg">
                 <motion.div
-                    className="relative z-10 card-zen p-10 md:p-12 overflow-hidden border border-white/60 bg-white/60 backdrop-blur-3xl shadow-xl"
+                    className="relative z-10 card-zen p-[var(--spacing-card-lg)] overflow-hidden border border-white/60 bg-white/60 backdrop-blur-3xl shadow-xl"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
@@ -36,7 +36,7 @@ export function MidCTA() {
                             <h2 className="section-title text-gray-900 mb-4 tracking-tight font-bold">
                                 Not Just a Book. <br />An <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Operating System</span>.
                             </h2>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
+                            <p className="text-[length:var(--font-size-h3)] text-gray-600 mb-6 leading-relaxed font-medium">
                                 Outlive shifts the focus from lifespan to healthspan.
                                 It's about adding life to your years, not just years to your life.
                             </p>
@@ -57,7 +57,7 @@ export function MidCTA() {
                                 return (
                                     <motion.div
                                         key={i}
-                                        className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/70 text-center hover:bg-white/80 transition-all duration-500 shadow-sm"
+                                        className="bg-white/60 backdrop-blur-md p-[var(--spacing-card)] rounded-2xl border border-white/70 text-center hover:bg-white/80 transition-all duration-500 shadow-sm"
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: i * 0.1 }}

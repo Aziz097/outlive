@@ -41,7 +41,7 @@ const pillars = [
 
 export function LongevityPillars() {
   return (
-    <section id="pillars" className="py-12 lg:py-16 bg-transparent relative">
+    <section id="pillars" className="py-[var(--spacing-section)] bg-transparent relative">
       <Container size="lg">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-10 relative z-10"
@@ -69,7 +69,7 @@ export function LongevityPillars() {
             return (
               <motion.div
                 key={pillar.title}
-                className="card-zen p-6 hover-lift overflow-hidden relative border border-white/60 bg-white/60 backdrop-blur-md"
+                className="card-zen p-[var(--spacing-card)] hover-lift overflow-hidden relative border border-white/60 bg-white/60 backdrop-blur-md"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -81,16 +81,20 @@ export function LongevityPillars() {
                   {pillar.num}
                 </span>
 
-                <div className="relative z-10 inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/70 shadow-sm backdrop-blur-sm mb-4 border border-white/50">
-                  <Icon className={`w-5 h-5 ${accentColor}`} strokeWidth={2} />
+                <div className="flex items-center gap-4 mb-4 relative z-10">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/70 shadow-sm backdrop-blur-sm border border-white/50 shrink-0">
+                    <Icon className={`w-5 h-5 ${accentColor}`} strokeWidth={2} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-[length:var(--font-size-h3)] font-bold text-gray-800 mb-0.5 tracking-tight">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest opacity-80">
+                      {pillar.subtitle}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="relative z-10 font-heading text-lg font-bold text-gray-800 mb-1 tracking-tight">
-                  {pillar.title}
-                </h3>
-                <p className="relative z-10 text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-widest opacity-80">
-                  {pillar.subtitle}
-                </p>
-                <p className="relative z-10 text-gray-600 text-sm leading-relaxed font-medium">
+                <p className="relative z-10 text-gray-600 text-[length:var(--font-size-p)] leading-relaxed font-medium">
                   {pillar.description}
                 </p>
               </motion.div>

@@ -59,6 +59,30 @@
 :root {
   --background: #FFFFFF;
   --foreground: #374151;
+
+  /* Responsive Spacing Variables */
+  --spacing-section: 3rem;
+  --spacing-card: 1.25rem;
+  --spacing-card-lg: 1.5rem;
+
+  /* Responsive Font Variables */
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.125rem;
+  --font-size-p: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --spacing-section: 6rem;
+    --spacing-card: 2rem;
+    --spacing-card-lg: 4rem;
+
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-p: 1.05rem;
+  }
 }
 
 body {
@@ -88,7 +112,7 @@ h6 {
    ═══════════════════════════════════════════ */
 
 .hero-headline {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: var(--font-size-h1);
   line-height: 1.15;
   font-weight: 600;
   /* Regular bold, not heavy */
@@ -100,14 +124,14 @@ h6 {
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-size: var(--font-size-h2);
   line-height: 1.3;
   font-weight: 600;
   color: #1F2937;
 }
 
 .section-subtitle {
-  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  font-size: var(--font-size-h3);
   line-height: 1.7;
   color: #6B7280;
   font-weight: 400;

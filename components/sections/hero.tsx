@@ -14,7 +14,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden py-12 lg:py-16">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden py-[var(--spacing-section)]">
       <AmbientBackground />
 
       <Container size="xl">
@@ -39,7 +39,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subtitle - Darker Gray */}
-            <p className="section-subtitle text-lg text-gray-700 font-medium leading-relaxed max-w-md">
+            <p className="section-subtitle text-[length:var(--font-size-h3)] text-gray-700 font-medium leading-relaxed max-w-md">
               Stop managing disease. Start engineering your health.
               A comprehensive strategy to live better, not just longer.
             </p>

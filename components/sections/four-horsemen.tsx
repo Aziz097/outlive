@@ -45,7 +45,7 @@ const horsemen = [
 
 export function FourHorsemen() {
   return (
-    <section id="four-horsemen" className="py-12 lg:py-16 bg-transparent relative">
+    <section id="four-horsemen" className="py-[var(--spacing-section)] bg-transparent relative">
       <Container size="lg">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-10 relative z-10"
@@ -62,7 +62,8 @@ export function FourHorsemen() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 relative z-10">
+        {/* Separate Cards Grid (Simplified Layout) */}
+        <div className="grid md:grid-cols-2 gap-4 lg:gap-6 relative z-10">
           {horsemen.map((item, i) => {
             const Icon = item.icon
             let accentColor = "text-pink-500"
@@ -73,29 +74,34 @@ export function FourHorsemen() {
             return (
               <motion.div
                 key={item.title}
-                className="card-zen p-8 hover-lift border border-white/60 bg-white/60 backdrop-blur-md"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className="card-zen p-[var(--spacing-card)] flex gap-5 hover-lift border border-white/60 bg-white/60 backdrop-blur-md"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                whileHover={{ y: -5 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/70 shadow-sm backdrop-blur-sm border border-white/50`}>
-                    <Icon className={`w-6 h-6 ${accentColor}`} strokeWidth={2} />
-                  </div>
-                  <div className="text-right">
-                    <div className={`text-xl font-heading font-bold text-gray-700`}>{item.stat}</div>
-                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider opacity-80">{item.statLabel}</div>
-                  </div>
+                <div className={`inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 shadow-sm backdrop-blur-sm border border-white/50 shrink-0`}>
+                  <Icon className={`w-5 h-5 md:w-6 md:h-6 ${accentColor}`} strokeWidth={2} />
                 </div>
-                <h3 className="font-heading text-lg font-bold text-gray-800 mb-1 tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-[10px] text-gray-500 mb-3 font-semibold uppercase tracking-widest opacity-70">{item.subtitle}</p>
-                <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                  {item.description}
-                </p>
+
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className="font-heading text-lg font-bold text-gray-800 tracking-tight leading-tight">
+                      {item.title}
+                    </h3>
+                    <span className={`text-[10px] font-bold px-2 py-1 rounded-full bg-white/50 border border-white/60 uppercase tracking-widest ml-2 whitespace-nowrap ${accentColor}`}>
+                      {item.stat}
+                    </span>
+                  </div>
+
+                  <p className="text-[10px] text-gray-500 mb-2 font-semibold uppercase tracking-widest opacity-70">
+                    {item.subtitle}
+                  </p>
+
+                  <p className="text-gray-600 text-[length:var(--font-size-p)] leading-relaxed font-medium">
+                    {item.description}
+                  </p>
+                </div>
               </motion.div>
             )
           })}
